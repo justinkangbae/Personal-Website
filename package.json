@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/justinkangbae/Personal-Website/issues"
   },
-  "homepage": "https://github.com/justinkangbae/Personal-Website#readme"
+  "homepage": "https://github.com/justinkangbae/Personal-Website#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
