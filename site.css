@@ -1,0 +1,151 @@
+body{
+	color: #373737;
+	background: #F7F8FA;
+	font-family: "Montserrat", sans-serif;
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+h1{
+	font-weight: 700;
+	font-size: 45px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.buttons{
+	display: inline-block; 
+	padding: 15px;
+	font-size: 20px;
+	color: #373737;
+}
+
+.header{
+	height: 100vh;
+	position: relative;
+}
+
+.container{
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.subsection_underline{ 
+	border: 1px solid #dcd0c0; 
+	margin-bottom: 50px;
+}
+
+.project_entry{ margin-bottom: 150px; }
+
+.project_underline{
+	width: 50px;
+	border: 1px solid #373737;
+	margin: 10px 0;
+}
+
+.project_title{ margin-bottom: 0.5em; }
+
+.project_image{
+	height: 290px;
+	width: 450px;
+	margin: auto;
+}
+
+.fa-file{ animation-delay: 0.8s; }
+.fa-github{ animation-delay: 0.6s; }
+.fa-linkedin-in{ animation-delay: 0.4s; }
+.fa-facebook-f{ animation-delay: 0.2s; }
+
+.fadeIn{ animation-duration: 1.5s; }
+
+@media (min-width: 1200px){
+	#laptop{
+		margin-top: 110px;
+		margin-left: 650px;
+		width: 400px;
+		height: 400px;
+	}
+}
+
+@media (min-width: 992px){
+	#laptop{
+		margin-top: px;
+		margin-left: px;
+		width: 350px;
+		height: 350px;
+	}
+}
+
+@media (min-width: 768px){
+	#laptop{
+		margin-top: px;
+		margin-left: px;
+		width: 400px;
+		height: 400px;
+	}
+}
+
+@media (min-width: 600px){
+	#laptop{
+		margin-top: px;
+		margin-left: px;
+		width: 400px;
+		height: 400px;
+	}
+}
+
+@media (max-width: 600px){
+	#laptop{
+		margin-top: px;
+		margin-left: px;
+		width: 400px;
+		height: 400px;
+	}
+}
+
+#resume{ 
+	padding-right: 15px; 
+	font-size: 20px;
+	color: #373737;
+	display: inline-block;
+}
+
+#wrapper{
+	position: absolute;
+	top: 25%;
+}
+
+#underline {
+	border-bottom: 5px solid #dcd0c0;
+	margin: 35px 0;
+	width: 106px;
+}
+
+#bio{
+	max-width: 500px;
+	margin-bottom: 35px;
+	font-family: "Lato", sans-serif;
+}
+
+#break{
+	border-bottom: 25px solid white;
+	margin: 160px 0;
+	width: 100%;
+}
+
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.15s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
+}
