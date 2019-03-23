@@ -4,8 +4,7 @@
   "description": "",
   "main": "site.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node site.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -18,6 +17,5 @@
   },
   "homepage": "https://github.com/justinkangbae/Personal-Website#readme",
   "dependencies": {
-    "express": "^4.16.4"
   }
 }
