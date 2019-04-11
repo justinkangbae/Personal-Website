@@ -103,8 +103,9 @@ h1{
 }
 
 #wrapper{
+	transform: translateY(-50%);
 	position: absolute;
-	top: 25%;
+	top: 50%;
 }
 
 #underline {
