@@ -67,7 +67,7 @@ h1{
 	}
 }
 
-@media (min-width: 992px){
+@media (min-width: 992px ) and (max-width: 1200px){
 	#laptop{
 		margin-top: 150px;
 		margin-left: 700px;
@@ -76,7 +76,7 @@ h1{
 	}
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) and (max-width: 992px){
 	#laptop{
 		margin-top: 150px;
 		margin-left: 650px;
@@ -85,7 +85,7 @@ h1{
 	}
 }
 
-@media (min-width: 600px){
+@media (min-width: 600px) and (max-width: 768px){
 	#laptop{
 		margin-top: 150px;
 		margin-left: 600px;
@@ -94,7 +94,7 @@ h1{
 	}
 }
 
-@media (max-width: 600px){
+@media (max-width: 599px){
 	#laptop{
 		display: none;
 	}
