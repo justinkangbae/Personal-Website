@@ -1,4 +1,4 @@
-body{
+html, body{
 	color: #373737;
 	background: #F7F8FA;
 	font-family: "Montserrat", sans-serif;
@@ -64,7 +64,7 @@ h1{
 /* Media queries for desktops */
 @media (min-width: 1200px){
 	#laptop{
-		margin-top: 150px;
+		margin-top: 220px;
 		margin-left: 700px;
 		width: 400px;
 		height: 400px;
@@ -73,7 +73,7 @@ h1{
 
 @media (min-width: 992px) and (max-width: 1200px){
 	#laptop{
-		margin-top: 180px;
+		margin-top: 230px;
 		margin-left: 580px;
 		width: 350px;
 		height: 350px;
@@ -82,8 +82,8 @@ h1{
 
 @media (min-width: 768px) and (max-width: 991px){
 	#laptop{
-		margin-top: 230px;
-		margin-left: 510px;
+		margin-top: 270px;
+		margin-left: 530px;
 		width: 250px;
 		height: 250px;
 	}
