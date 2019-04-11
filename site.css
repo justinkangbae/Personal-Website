@@ -91,6 +91,40 @@ h1{
 	}
 }
 
+/* Media queries for smaller height devices such as laptops */
+@media (min-width: 1200px){
+	#laptop{
+		margin-top: 150px;
+		margin-left: 700px;
+		width: 400px;
+		height: 400px;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1200px){
+	#laptop{
+		margin-top: 180px;
+		margin-left: 580px;
+		width: 350px;
+		height: 350px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+	#laptop{
+		margin-top: 230px;
+		margin-left: 510px;
+		width: 250px;
+		height: 250px;
+	}
+}
+
+@media (max-width: 767px){
+	#laptop{
+		display: none;
+	}
+}
+
 #resume{ 
 	padding-right: 15px; 
 	font-size: 20px;
