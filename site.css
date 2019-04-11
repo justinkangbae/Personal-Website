@@ -60,8 +60,8 @@ h1{
 
 @media (min-width: 1200px){
 	#laptop{
-		margin-top: 110px;
-		margin-left: 650px;
+		margin-top: 150px;
+		margin-left: 750px;
 		width: 400px;
 		height: 400px;
 	}
@@ -69,8 +69,8 @@ h1{
 
 @media (min-width: 992px){
 	#laptop{
-		margin-top: px;
-		margin-left: px;
+		margin-top: 150px;
+		margin-left: 700px;
 		width: 350px;
 		height: 350px;
 	}
@@ -78,28 +78,25 @@ h1{
 
 @media (min-width: 768px){
 	#laptop{
-		margin-top: px;
-		margin-left: px;
-		width: 400px;
-		height: 400px;
+		margin-top: 150px;
+		margin-left: 650px;
+		width: 300px;
+		height: 300px;
 	}
 }
 
 @media (min-width: 600px){
 	#laptop{
-		margin-top: px;
-		margin-left: px;
-		width: 400px;
-		height: 400px;
+		margin-top: 150px;
+		margin-left: 600px;
+		width: 250px;
+		height: 250px;
 	}
 }
 
 @media (max-width: 600px){
 	#laptop{
-		margin-top: px;
-		margin-left: px;
-		width: 400px;
-		height: 400px;
+		display: none;
 	}
 }
 
