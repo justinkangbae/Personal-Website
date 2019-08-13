@@ -1,0 +1,23 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box; 
+}
+
+.nav {
+
+    list-style: none;
+
+    &__element {
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    &__element:hover {
+        background-color: black;
+    }
+}

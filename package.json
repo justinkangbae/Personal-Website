@@ -4,7 +4,7 @@
   "description": "",
   "main": "site.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:sass": "node-sass sass/site.scss css/site.css -w"
   },
   "repository": {
     "type": "git",
@@ -16,6 +16,8 @@
     "url": "https://github.com/justinkangbae/Personal-Website/issues"
   },
   "homepage": "https://github.com/justinkangbae/Personal-Website#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.12.0"
   }
 }
