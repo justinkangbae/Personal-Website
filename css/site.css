@@ -6,10 +6,49 @@ html {
   font-size: 62.5%;
   box-sizing: border-box; }
 
+body {
+  font-family: "Lato";
+  font-weight: 400;
+  position: relative;
+  color: #fff; }
+
+.header {
+  width: 100vw;
+  height: 100vh;
+  background-color: #acc7dc;
+  display: flex; }
+
 .nav {
-  list-style: none; }
-  .nav__element {
-    display: inline-block;
-    text-decoration: none; }
-  .nav__element:hover {
-    background-color: black; }
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 18vh; }
+  .nav__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #fff;
+    width: 6rem;
+    height: 6rem;
+    margin-left: 5rem;
+    transition: transform 0.1s; }
+    .nav__logo:hover {
+      transform: scale(1.05); }
+    .nav__logo--letters {
+      color: #acc7dc;
+      font-size: 3rem; }
+  .nav__links {
+    list-style: none;
+    font-size: 1.6rem;
+    display: flex;
+    margin-right: 5rem; }
+    .nav__links--element {
+      text-decoration: none;
+      padding: 2rem;
+      color: #fff;
+      transition: border-bottom 0.2s; }
+      .nav__links--element:hover {
+        border-bottom: solid 0.3rem #fff; }

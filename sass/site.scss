@@ -1,3 +1,9 @@
+//VARIABLES
+$color-pastel-blue: #acc7dc;
+$color-pastel-gray: #d6dde3;
+$color-white: #fff;
+
+//SETUP
 * {
 	margin: 0;
 	padding: 0;
@@ -5,19 +11,67 @@
 
 html {
 	font-size: 62.5%;
-	box-sizing: border-box; 
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: "Lato";
+    font-weight: 400;
+    position: relative;
+    color: $color-white;
+}
+
+.header {
+    width: 100vw;
+    height: 100vh;
+    background-color: $color-pastel-blue;
+    display: flex;
 }
 
 .nav {
+    display: flex; //to make arranging elements within container easy to arrange
+    position: fixed; //navigation bar should be accessible at all times
+    justify-content: space-between;
+    align-items: center; //aligns links on vertical axis
+    width: 100vw;
+    height: 18vh;
 
-    list-style: none;
+    &__logo {
+        display: flex;
+        align-items: center;     //centers JB letters on vertical axis
+        justify-content: center; //centers JB letters on horizontal axis 
+        border-radius: 50%; //so its a circle
+        background-color: $color-white;
+        width: 6rem;
+        height: 6rem;
+        margin-left: 5rem;
+        transition: transform 0.1s;
 
-    &__element {
-        display: inline-block;
-        text-decoration: none;
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        &--letters {
+            color: $color-pastel-blue;
+            font-size: 3rem;
+        }
     }
 
-    &__element:hover {
-        background-color: black;
+    &__links {
+        list-style: none;
+        font-size: 1.6rem;
+        display: flex;
+        margin-right: 5rem;
+
+        &--element {
+            text-decoration: none;
+            padding: 2rem;
+            color: $color-white;
+            transition: border-bottom 0.2s;
+
+            &:hover {
+                border-bottom: solid 0.3rem $color-white;
+            }
+        }
     }
 }
