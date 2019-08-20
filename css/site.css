@@ -20,7 +20,7 @@ body {
   align-items: center;
   width: 100vw;
   height: 18vh;
-  z-index: 10; }
+  z-index: 100; }
   .nav__logo {
     display: flex;
     align-items: center;
@@ -52,7 +52,7 @@ body {
       color: #fff;
       transition: all 0.3s; }
       .nav__links--element:hover {
-        border-bottom: solid 0.3rem #fff; }
+        border-bottom: 0.3rem solid #fff; }
 
 .header {
   width: 100vw;
@@ -90,4 +90,33 @@ body {
         transform: translateY(-0.1rem); }
 
 .portfolio {
-  height: 200vh; }
+  height: 200vh;
+  background-color: #d6dde3; }
+  .portfolio__title {
+    color: #fff;
+    text-align: center;
+    padding: 4rem 0 5rem 0;
+    font-size: 3rem; }
+
+.aboutme {
+  height: 100vh;
+  background-color: #5d5c61; }
+  .aboutme__title {
+    color: #fff;
+    text-align: center;
+    padding: 4rem 0 5rem 0;
+    font-size: 3rem; }
+
+.contact {
+  height: 100vh;
+  background-color: #557a95; }
+  .contact__title {
+    color: #fff;
+    text-align: center;
+    padding: 4rem 0 5rem 0;
+    font-size: 3rem; }
+
+.separator {
+  height: 0.2rem;
+  width: 100vw;
+  background-color: #d6dde3; }
