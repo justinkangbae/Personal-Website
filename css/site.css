@@ -4,7 +4,8 @@
 
 html {
   font-size: 62.5%;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  overflow-x: hidden; }
 
 body {
   font-family: "Lato";
@@ -12,19 +13,14 @@ body {
   position: relative;
   color: #fff; }
 
-.header {
-  width: 100vw;
-  height: 100vh;
-  background-color: #acc7dc;
-  display: flex; }
-
 .nav {
   display: flex;
   position: fixed;
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-  height: 18vh; }
+  height: 18vh;
+  z-index: 10; }
   .nav__logo {
     display: flex;
     align-items: center;
@@ -34,21 +30,64 @@ body {
     width: 6rem;
     height: 6rem;
     margin-left: 5rem;
-    transition: transform 0.1s; }
-    .nav__logo:hover {
-      transform: scale(1.05); }
+    transition: transform 0.4s;
+    cursor: pointer; }
     .nav__logo--letters {
       color: #acc7dc;
-      font-size: 3rem; }
+      font-size: 3rem;
+      font-family: "Lobster"; }
+    .nav__logo:hover {
+      transform: scale(1.1); }
+    .nav__logo:active {
+      transform: scale(0.95); }
   .nav__links {
     list-style: none;
     font-size: 1.6rem;
     display: flex;
-    margin-right: 5rem; }
+    margin-right: 5rem;
+    font-family: "Montserrat"; }
     .nav__links--element {
       text-decoration: none;
-      padding: 2rem;
+      padding: 2rem 2rem 1.5rem 2rem;
       color: #fff;
-      transition: border-bottom 0.2s; }
+      transition: all 0.3s; }
       .nav__links--element:hover {
         border-bottom: solid 0.3rem #fff; }
+
+.header {
+  width: 100vw;
+  height: 100vh;
+  background-color: #acc7dc;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  font-family: "Montserrat"; }
+  .header__title {
+    display: flex;
+    position: absolute;
+    top: 32%;
+    flex-direction: column;
+    align-items: center; }
+    .header__title--name {
+      font-size: 8rem;
+      padding-bottom: 4.5rem;
+      font-family: "Lato"; }
+    .header__title--summary {
+      padding-bottom: 4.5rem;
+      font-size: 2rem; }
+    .header__title--button {
+      padding: 1.5rem 4rem;
+      border: 2px solid #fff;
+      border-radius: 2rem;
+      font-size: 2rem;
+      transition: all 0.4s;
+      cursor: pointer; }
+      .header__title--button:hover {
+        transform: translateY(-0.5rem);
+        background-color: #fff;
+        color: #acc7dc; }
+      .header__title--button:active {
+        transform: translateY(-0.1rem); }
+
+.portfolio {
+  height: 200vh; }

@@ -12,6 +12,7 @@ $color-white: #fff;
 html {
 	font-size: 62.5%;
     box-sizing: border-box; 
+    overflow-x: hidden;
 }
 
 body {
@@ -21,13 +22,7 @@ body {
     color: $color-white;
 }
 
-.header {
-    width: 100vw;
-    height: 100vh;
-    background-color: $color-pastel-blue;
-    display: flex;
-}
-
+///////////////NAVIGATION
 .nav {
     display: flex; //to make arranging elements within container easy to arrange
     position: fixed; //navigation bar should be accessible at all times
@@ -35,6 +30,7 @@ body {
     align-items: center; //aligns links on vertical axis
     width: 100vw;
     height: 18vh;
+    z-index: 10;
 
     &__logo {
         display: flex;
@@ -45,15 +41,21 @@ body {
         width: 6rem;
         height: 6rem;
         margin-left: 5rem;
-        transition: transform 0.1s;
-
-        &:hover {
-            transform: scale(1.05);
-        }
+        transition: transform 0.4s;
+        cursor: pointer;
 
         &--letters {
             color: $color-pastel-blue;
             font-size: 3rem;
+            font-family: "Lobster";
+        }
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &:active {
+            transform: scale(0.95);
         }
     }
 
@@ -62,16 +64,82 @@ body {
         font-size: 1.6rem;
         display: flex;
         margin-right: 5rem;
+        font-family: "Montserrat";
 
         &--element {
             text-decoration: none;
-            padding: 2rem;
+            padding: 2rem 2rem 1.5rem 2rem;
             color: $color-white;
-            transition: border-bottom 0.2s;
+            transition: all 0.3s;
 
             &:hover {
                 border-bottom: solid 0.3rem $color-white;
             }
         }
     }
+}
+
+//////////////HEADER
+.header {
+    width: 100vw;
+    height: 100vh;
+    background-color: $color-pastel-blue;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    font-family: "Montserrat";
+
+    &__title {
+        display: flex;
+        position: absolute;
+        top: 32%;
+        flex-direction: column;
+        align-items: center;
+
+        &--name {
+            font-size: 8rem;
+            padding-bottom: 4.5rem;
+            font-family: "Lato";
+        }
+    
+        &--summary {
+            padding-bottom: 4.5rem;
+            font-size: 2rem;
+        }
+
+        &--button {
+            padding: 1.5rem 4rem;
+            border: 2px solid $color-white;
+            border-radius: 2rem;
+            font-size: 2rem;
+            transition: all 0.4s;
+            cursor: pointer;
+
+            &:hover {
+                transform: translateY(-0.5rem);
+                background-color: $color-white;
+                color: $color-pastel-blue;
+            }
+
+            &:active {
+                transform: translateY(-0.1rem);
+            }
+        }
+    }
+}
+
+/////////PORTFOLIO
+.portfolio {
+    height: 200vh;
+    
+}
+
+/////////ABOUT ME
+.aboutme {
+
+}
+
+/////////CONTACT
+.contact {
+
 }
