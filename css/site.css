@@ -10,7 +10,6 @@ html {
 body {
   font-family: "Lato";
   font-weight: 400;
-  position: relative;
   color: #fff; }
 
 .nav {
@@ -56,7 +55,7 @@ body {
 
 .header {
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
   background-color: #acc7dc;
   display: flex;
   position: relative;
@@ -65,7 +64,7 @@ body {
   .header__title {
     display: flex;
     position: absolute;
-    top: 32%;
+    top: 27%;
     flex-direction: column;
     align-items: center; }
     .header__title--name {
@@ -90,13 +89,14 @@ body {
         transform: translateY(-0.1rem); }
 
 .portfolio {
-  height: 200vh;
   background-color: #d6dde3; }
   .portfolio__title {
     color: #fff;
     text-align: center;
-    padding: 4rem 0 5rem 0;
-    font-size: 3rem; }
+    padding: 10rem 0 6rem 0;
+    font-size: 5rem; }
+  .portfolio__entry {
+    height: 100vh; }
 
 .aboutme {
   height: 100vh;
@@ -104,8 +104,8 @@ body {
   .aboutme__title {
     color: #fff;
     text-align: center;
-    padding: 4rem 0 5rem 0;
-    font-size: 3rem; }
+    padding: 10rem 0 6rem 0;
+    font-size: 5rem; }
 
 .contact {
   height: 100vh;
@@ -113,8 +113,8 @@ body {
   .contact__title {
     color: #fff;
     text-align: center;
-    padding: 4rem 0 5rem 0;
-    font-size: 3rem; }
+    padding: 10rem 0 6rem 0;
+    font-size: 5rem; }
 
 .separator {
   height: 0.2rem;

@@ -9,8 +9,8 @@ $color-white: #fff;
 @mixin section__title {
     color: $color-white;
     text-align: center;
-    padding: 4rem 0 5rem 0;
-    font-size: 3rem;
+    padding: 10rem 0 6rem 0;
+    font-size: 5rem;
 }
 
 //SETUP
@@ -28,7 +28,6 @@ html {
 body {
     font-family: "Lato";
     font-weight: 400;
-    position: relative;
     color: $color-white;
 }
 
@@ -92,7 +91,7 @@ body {
 //////////////HEADER
 .header {
     width: 100vw;
-    height: 100vh;
+    height: 120vh;
     background-color: $color-pastel-blue;
     display: flex;
     position: relative;
@@ -102,7 +101,7 @@ body {
     &__title {
         display: flex;
         position: absolute;
-        top: 32%;
+        top: 27%;
         flex-direction: column;
         align-items: center;
 
@@ -140,11 +139,14 @@ body {
 
 /////////PORTFOLIO
 .portfolio {
-    height: 200vh;
     background-color: $color-pastel-gray;
     
     &__title {
         @include section__title;
+    }
+
+    &__entry {
+        height: 100vh;
     }
 }
 
