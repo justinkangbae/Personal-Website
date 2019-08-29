@@ -68,6 +68,7 @@ body {
     flex-direction: column;
     align-items: center; }
     .header__title--name {
+      letter-spacing: 0.2rem;
       font-size: 8rem;
       padding-bottom: 4.5rem;
       font-family: "Lato"; }
