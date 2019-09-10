@@ -1,20 +1,29 @@
 //VARIABLES
 $color-pastel-blue: #acc7dc;
-$color-blue: #557a95;
-$color-dark-gray: #5d5c61;
-$color-pastel-gray: #d6dde3;
+$color-blue: #7c97c2;
+$color-pastel-green: #a3d1d0;
 $color-white: #fff;
 $color-darker-gray: #474747;
-$color-light-gray: #f5f5f5;
+$color-light-gray: #f9f9f9;
 $separator: #e6e6e6;
 
 //MIXINS
 @mixin section__title {
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
     text-align: center;
     font-size: 5rem;
     font-weight: bold;
-    letter-spacing: 0.5rem;
+}
+
+@mixin center-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin padding-lineheight {
+    line-height: 3rem;
+    padding: 12rem 0 12rem 0;
 }
 
 //SETUP
@@ -146,10 +155,8 @@ body {
 .portfolio {
 
     &__intro {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 12rem 0 12rem 0;
+        @include center-flex;
+        @include padding-lineheight;
         background-color: $color-light-gray;
 
         &--title {
@@ -161,8 +168,7 @@ body {
         &--description {
             color: rgba($color-darker-gray, 0.7);
             font-size: 2rem;
-            width: 70vw;
-            letter-spacing: 0.1rem;
+            width: 55vw;
             text-align: center;
         }
     }
@@ -170,9 +176,7 @@ body {
     &__entry {
         color: $color-darker-gray;
         background-color: $color-white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include center-flex;
 
         &--title {
             font-size: 3rem;
@@ -205,26 +209,57 @@ body {
 
 ////////ABOUT ME
 .aboutme {
-    height: 100vh;
-    background-color: $color-dark-gray;
+    @include center-flex;
+    @include padding-lineheight;
+    background-color: $color-pastel-green;
     color: $color-white;
 
     &__title {
         @include section__title;
-        padding-top: 8rem;
     }
 
-
+    &__description {
+        font-size: 2rem;
+        width: 55vw;
+        letter-spacing: 0.1rem;
+        text-align: center;
+    }
 }
 
 /////////CONTACT
 .contact {
-    height: 100vh;
+    @include center-flex;
+    @include padding-lineheight;
     background-color: $color-blue;
+    color: $color-white;
 
     &__title {
         @include section__title;
-        color: $color-white;
+    }
+
+    &__description {
+        font-size: 2rem;
+        width: 40vw;
+        text-align: center;
+    }
+
+    &__links {
+        display: flex;
+
+        &--icon {
+            list-style: none;
+            font-size: 3rem;
+            padding: 0 2rem 0 2rem;
+            transition: all .2s;
+
+            &:hover {
+                
+            }   
+
+            &:active {
+
+            }
+        }
     }
 }
 
@@ -238,4 +273,11 @@ body {
 
 [class~="portfolio__entry"]:last-of-type {
     padding-bottom: 12rem;
+}
+
+.sm--separator {
+    height: 0.1rem;
+    width: 30vw;
+    background-color: $color-white;
+    margin: 4rem 0 2.5rem 0;
 }

@@ -93,20 +93,19 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  line-height: 3rem;
   padding: 12rem 0 12rem 0;
-  background-color: #f5f5f5; }
+  background-color: #f9f9f9; }
   .portfolio__intro--title {
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
     text-align: center;
     font-size: 5rem;
     font-weight: bold;
-    letter-spacing: 0.5rem;
     color: #474747; }
   .portfolio__intro--description {
     color: rgba(71, 71, 71, 0.7);
     font-size: 2rem;
-    width: 70vw;
-    letter-spacing: 0.1rem;
+    width: 55vw;
     text-align: center; }
 
 .portfolio__entry {
@@ -134,27 +133,48 @@ body {
       transform: scale(0.98); }
 
 .aboutme {
-  height: 100vh;
-  background-color: #5d5c61;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 3rem;
+  padding: 12rem 0 12rem 0;
+  background-color: #a3d1d0;
   color: #fff; }
   .aboutme__title {
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
     text-align: center;
     font-size: 5rem;
-    font-weight: bold;
-    letter-spacing: 0.5rem;
-    padding-top: 8rem; }
+    font-weight: bold; }
+  .aboutme__description {
+    font-size: 2rem;
+    width: 55vw;
+    letter-spacing: 0.1rem;
+    text-align: center; }
 
 .contact {
-  height: 100vh;
-  background-color: #557a95; }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 3rem;
+  padding: 12rem 0 12rem 0;
+  background-color: #7c97c2;
+  color: #fff; }
   .contact__title {
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
     text-align: center;
     font-size: 5rem;
-    font-weight: bold;
-    letter-spacing: 0.5rem;
-    color: #fff; }
+    font-weight: bold; }
+  .contact__description {
+    font-size: 2rem;
+    width: 40vw;
+    text-align: center; }
+  .contact__links {
+    display: flex; }
+    .contact__links--icon {
+      list-style: none;
+      font-size: 3rem;
+      padding: 0 2rem 0 2rem;
+      transition: all .2s; }
 
 .separator {
   height: 0.1rem;
@@ -164,3 +184,9 @@ body {
 
 [class~="portfolio__entry"]:last-of-type {
   padding-bottom: 12rem; }
+
+.sm--separator {
+  height: 0.1rem;
+  width: 30vw;
+  background-color: #fff;
+  margin: 4rem 0 2.5rem 0; }
