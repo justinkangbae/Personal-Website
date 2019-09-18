@@ -1,30 +1,4 @@
-//VARIABLES
-$color-pastel-blue: #acc7dc;
-$color-blue: #7c97c2;
-$color-pastel-green: #a3d1d0;
-$color-white: #fff;
-$color-darker-gray: #474747;
-$color-light-gray: #f9f9f9;
-$separator: #e6e6e6;
-
-//MIXINS
-@mixin section__title {
-    padding-bottom: 4rem;
-    text-align: center;
-    font-size: 5rem;
-    font-weight: bold;
-}
-
-@mixin center-flex {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-@mixin padding-lineheight {
-    line-height: 3rem;
-    padding: 12rem 0 12rem 0;
-}
+@import "import";
 
 //SETUP
 * {
@@ -36,12 +10,26 @@ html {
 	font-size: 62.5%;
     box-sizing: border-box; 
     overflow-x: hidden;
+    scroll-behavior: smooth;
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 40%;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 30%;
+    }
 }
 
 body {
     font-family: "Lato";
     font-weight: 400;
     color: $color-white;
+    overflow-x: hidden;
 }
 
 ///////////////NAVIGATION
@@ -60,17 +48,11 @@ body {
         justify-content: center; //centers JB letters on horizontal axis 
         border-radius: 50%; //so its a circle
         background-color: $color-white;
-        width: 6rem;
-        height: 6rem;
+        width: 7rem;
+        height: 7rem;
         margin-left: 5rem;
         transition: transform 0.4s;
-        cursor: pointer;
-
-        &--letters {
-            color: $color-pastel-blue;
-            font-size: 3rem;
-            font-family: "Lobster";
-        }
+        text-decoration: none;
 
         &:hover {
             transform: scale(1.1);
@@ -79,11 +61,17 @@ body {
         &:active {
             transform: scale(0.95);
         }
+
+        &--letters {
+            color: $color-pastel-blue;
+            font-size: 3.5rem;
+            font-family: "Lobster";
+        }
     }
 
     &__links {
         list-style: none;
-        font-size: 1.6rem;
+        font-size: 2rem;
         display: flex;
         margin-right: 5rem;
         font-family: "Montserrat";
@@ -104,39 +92,40 @@ body {
 //////////////HEADER
 .header {
     width: 100vw;
-    height: 120vh;
+    height: 105vh;
     background-color: $color-pastel-blue;
     display: flex;
-    position: relative;
     justify-content: center;
     font-family: "Montserrat";
 
     &__title {
         display: flex;
-        position: absolute;
-        top: 27%;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
 
         &--name {
             letter-spacing: 0.2rem;
             font-size: 8rem;
             padding-bottom: 4.5rem;
             font-family: "Lato";
+            animation: fadeIn 1.2s;
         }
     
         &--summary {
             padding-bottom: 4.5rem;
-            font-size: 2rem;
+            font-size: 2.5rem;
+            animation: fadeIn 1.2s;
         }
 
         &--button {
-            padding: 1.5rem 3.5rem;
+            padding: 2rem 3.5rem;
             border: 2px solid $color-white;
-            border-radius: 3rem;
-            font-size: 2rem;
+            border-radius: 3.5rem;
+            font-size: 2.5rem;
             transition: all 0.4s;
             cursor: pointer;
+            animation: slideUp 1s;
 
             &:hover {
                 transform: translateY(-0.5rem);
@@ -192,8 +181,8 @@ body {
         }
 
         &--image {
-            width: 50rem;
-            height: 33rem;
+            width: 55rem;
+            height: 36rem;
             transition: all 0.3s;
 
             &:hover {
@@ -247,17 +236,22 @@ body {
         display: flex;
 
         &--icon {
-            list-style: none;
-            font-size: 3rem;
+            text-decoration: none;
+            font-size: 3.5rem;
             padding: 0 2rem 0 2rem;
             transition: all .2s;
 
+            &:link,
+            &:visited {
+                color: $color-white;
+            }
+
             &:hover {
-                
+                transform: scale(1.1);
             }   
 
             &:active {
-
+                transform: scale(0.90);
             }
         }
     }

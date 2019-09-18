@@ -15,24 +15,21 @@
 <body>
 	<!-- NAVIGATION -->
 	<div class="nav">
-		<div class="nav__logo">
-			<div class="nav__logo--letters">JB</a></div>
-		</div>
+		<a class="nav__logo" href="#"> 
+			<div class="nav__logo--letters">JB</div>
+		</a>
 
 		<ul class="nav__links">
 			<li>
-				<a href="#" class="nav__links--element">Portfolio</a>
-				<!-- <div class="nav__links--element-border"></div> -->
+				<a href="#portfolio" class="nav__links--element">Portfolio</a>
 			</li>
 
 			<li>
-				<a href="#" class="nav__links--element">About Me</a>
-				<!-- <div class="nav__links--element-border"></div> -->
+				<a href="#aboutme" class="nav__links--element">About Me</a>
 			</li>
 
 			<li>
-				<a href="#" class="nav__links--element">Contact</a>
-				<!-- <div class="nav__links--element-border"></div> -->
+				<a href="#contact" class="nav__links--element">Contact</a>
 			</li>
 		</ul>
 	</div>
@@ -57,7 +54,7 @@
 	<!-- MAIN SECTION -->
 	<main>
 		<!-- PORTFOLIO SECTION -->
-		<section class="portfolio">
+		<section class="portfolio" id="portfolio">
 
 			<!-- PORTFOLIO INTRO -->
 			<div class="portfolio__intro">
@@ -97,7 +94,7 @@
 		</section>
 
 		<!-- ABOUT ME SECTION -->
-		<section class="aboutme">
+		<section class="aboutme" id="aboutme">
 			<h2 class="aboutme__title">About Me</h2>
 
 			<p class="aboutme__description">I am a web developer who recently graduated from the University of Texas at Dallas with a degree in Computer Engineering. I have a constant drive to learn and improve on my web development skills and would love to make this my career.</p>
@@ -105,7 +102,7 @@
 		</section>
 		
 		<!-- CONTACT SECTION -->
-		<section class="contact">
+		<section class="contact" id="contact">
 			<h2 class="contact__title">Let's get in contact!</h2>
 
 			<p class="contact__description">If you like my work and want to collaborate in some way, or want a greater look into my skills, feel free to click the links below.</p>
@@ -113,11 +110,11 @@
 			<div class="sm--separator"></div>
 
 			<div class="contact__links">
-				<li class="contact__links--icon"><i class="fas fa-file"></i></li>
-				<li class="contact__links--icon"><i class="fab fa-github-square"></i></li>
-				<li class="contact__links--icon"><i class="fab fa-linkedin"></i></li>
-				<li class="contact__links--icon"><i class="fab fa-facebook-square"></i></li>
-				<li class="contact__links--icon"><i class="fab fa-instagram"></i></li>
+				<a href="Resume.pdf" target="_blank" class="contact__links--icon fas fa-file"></a>
+				<a href="https://www.github.com/justinkangbae/" target="_blank" class="contact__links--icon fab fa-github-square"></a>
+				<a href="https://www.linkedin.com/in/justinbae3900/" target="_blank" class="contact__links--icon fab fa-linkedin"></a>
+				<a href="https://www.facebook.com/justin.k.bae" target="_blank" class="contact__links--icon fab fa-facebook-square"></a>
+				<a href="https://www.instagram.com/jkbaeber/" target="_blank" class="contact__links--icon fab fa-instagram"></a>
 			</div>
 		</section>
 	</main>
@@ -133,13 +130,6 @@
 
 
 	<script src="site.js"></script>
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-	<script>
-    	AOS.init();
-  	</script>
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>

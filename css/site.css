@@ -1,3 +1,23 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(18vh);
+    opacity: 0; }
+  50% {
+    opacity: 0;
+    transform: translateY(9vh); }
+  80% {
+    opacity: 0.5;
+    transform: translateY(-1.5vh); }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+
 * {
   margin: 0;
   padding: 0; }
@@ -5,12 +25,23 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  scroll-behavior: smooth; }
+  @media only screen and (max-width: 80em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 50em) {
+    html {
+      font-size: 40%; } }
+  @media only screen and (max-width: 27.5em) {
+    html {
+      font-size: 30%; } }
 
 body {
   font-family: "Lato";
   font-weight: 400;
-  color: #fff; }
+  color: #fff;
+  overflow-x: hidden; }
 
 .nav {
   display: flex;
@@ -26,22 +57,22 @@ body {
     justify-content: center;
     border-radius: 50%;
     background-color: #fff;
-    width: 6rem;
-    height: 6rem;
+    width: 7rem;
+    height: 7rem;
     margin-left: 5rem;
     transition: transform 0.4s;
-    cursor: pointer; }
-    .nav__logo--letters {
-      color: #acc7dc;
-      font-size: 3rem;
-      font-family: "Lobster"; }
+    text-decoration: none; }
     .nav__logo:hover {
       transform: scale(1.1); }
     .nav__logo:active {
       transform: scale(0.95); }
+    .nav__logo--letters {
+      color: #acc7dc;
+      font-size: 3.5rem;
+      font-family: "Lobster"; }
   .nav__links {
     list-style: none;
-    font-size: 1.6rem;
+    font-size: 2rem;
     display: flex;
     margin-right: 5rem;
     font-family: "Montserrat"; }
@@ -55,33 +86,34 @@ body {
 
 .header {
   width: 100vw;
-  height: 120vh;
+  height: 105vh;
   background-color: #acc7dc;
   display: flex;
-  position: relative;
   justify-content: center;
   font-family: "Montserrat"; }
   .header__title {
     display: flex;
-    position: absolute;
-    top: 27%;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    justify-content: center; }
     .header__title--name {
       letter-spacing: 0.2rem;
       font-size: 8rem;
       padding-bottom: 4.5rem;
-      font-family: "Lato"; }
+      font-family: "Lato";
+      animation: fadeIn 1.2s; }
     .header__title--summary {
       padding-bottom: 4.5rem;
-      font-size: 2rem; }
+      font-size: 2.5rem;
+      animation: fadeIn 1.2s; }
     .header__title--button {
-      padding: 1.5rem 3.5rem;
+      padding: 2rem 3.5rem;
       border: 2px solid #fff;
-      border-radius: 3rem;
-      font-size: 2rem;
+      border-radius: 3.5rem;
+      font-size: 2.5rem;
       transition: all 0.4s;
-      cursor: pointer; }
+      cursor: pointer;
+      animation: slideUp 1s; }
       .header__title--button:hover {
         transform: translateY(-0.5rem);
         background-color: #fff;
@@ -94,7 +126,7 @@ body {
   flex-direction: column;
   align-items: center;
   line-height: 3rem;
-  padding: 12rem 0 12rem 0;
+  padding: 12rem 0;
   background-color: #f9f9f9; }
   .portfolio__intro--title {
     padding-bottom: 4rem;
@@ -124,8 +156,8 @@ body {
     width: 50vw;
     line-height: 3rem; }
   .portfolio__entry--image {
-    width: 50rem;
-    height: 33rem;
+    width: 55rem;
+    height: 36rem;
     transition: all 0.3s; }
     .portfolio__entry--image:hover {
       transform: scale(1.02); }
@@ -137,7 +169,7 @@ body {
   flex-direction: column;
   align-items: center;
   line-height: 3rem;
-  padding: 12rem 0 12rem 0;
+  padding: 12rem 0;
   background-color: #a3d1d0;
   color: #fff; }
   .aboutme__title {
@@ -156,7 +188,7 @@ body {
   flex-direction: column;
   align-items: center;
   line-height: 3rem;
-  padding: 12rem 0 12rem 0;
+  padding: 12rem 0;
   background-color: #7c97c2;
   color: #fff; }
   .contact__title {
@@ -171,10 +203,16 @@ body {
   .contact__links {
     display: flex; }
     .contact__links--icon {
-      list-style: none;
-      font-size: 3rem;
+      text-decoration: none;
+      font-size: 3.5rem;
       padding: 0 2rem 0 2rem;
       transition: all .2s; }
+      .contact__links--icon:link, .contact__links--icon:visited {
+        color: #fff; }
+      .contact__links--icon:hover {
+        transform: scale(1.1); }
+      .contact__links--icon:active {
+        transform: scale(0.9); }
 
 .separator {
   height: 0.1rem;
