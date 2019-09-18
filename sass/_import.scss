@@ -1,0 +1,65 @@
+//VARIABLES
+$color-pastel-blue: #acc7dc;
+$color-blue: #7c97c2;
+$color-pastel-green: #a3d1d0;
+$color-white: #fff;
+$color-darker-gray: #474747;
+$color-light-gray: #f9f9f9;
+$separator: #e6e6e6;
+
+$bp-largest: 80em; //1280px
+$bp-medium: 50em; //800px
+$bp-small: 27.5em; //440px
+
+
+//MIXINS
+@mixin section__title {
+    padding-bottom: 4rem;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+@mixin center-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin padding-lineheight {
+    line-height: 3rem;
+    padding: 12rem 0;
+}
+
+//ANIMATIONS
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(18vh);
+        opacity: 0;
+    }  
+
+    50% {
+        opacity: 0;
+        transform: translateY(9vh);
+    }
+
+    80% {
+        opacity: 0.5;
+        transform: translateY(-1.5vh);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
