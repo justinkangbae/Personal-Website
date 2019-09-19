@@ -82,12 +82,13 @@ body {
 
         &--element {
             text-decoration: none;
-            padding: 2rem 2rem 1.5rem 2rem;
+            padding: 1.8rem;
             color: $color-white;
             transition: all 0.3s;
 
             &:hover {
-                border-bottom: 0.3rem solid $color-white;
+                color: $color-pastel-blue;
+                background-color: $color-white;
             }
         }
     }

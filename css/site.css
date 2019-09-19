@@ -81,11 +81,12 @@ body {
     font-family: "Montserrat"; }
     .nav__links--element {
       text-decoration: none;
-      padding: 2rem 2rem 1.5rem 2rem;
+      padding: 1.8rem;
       color: #fff;
       transition: all 0.3s; }
       .nav__links--element:hover {
-        border-bottom: 0.3rem solid #fff; }
+        color: #acc7dc;
+        background-color: #fff; }
 
 .header {
   width: 100vw;

@@ -16,7 +16,9 @@
     "url": "https://github.com/justinkangbae/Personal-Website/issues"
   },
   "homepage": "https://github.com/justinkangbae/Personal-Website#readme",
-  "dependencies": {},
+  "dependencies": {
+    "aos": "^2.3.4"
+  },
   "devDependencies": {
     "node-sass": "^4.12.0"
   }
