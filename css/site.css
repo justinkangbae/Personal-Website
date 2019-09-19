@@ -33,9 +33,12 @@ html {
   @media only screen and (max-width: 50em) {
     html {
       font-size: 40%; } }
-  @media only screen and (max-width: 27.5em) {
+  @media only screen and (max-width: 32em) {
     html {
       font-size: 30%; } }
+  @media only screen and (max-width: 23em) {
+    html {
+      font-size: 25%; } }
 
 body {
   font-family: "Lato";
@@ -98,7 +101,7 @@ body {
     justify-content: center; }
     .header__title--name {
       letter-spacing: 0.2rem;
-      font-size: 8rem;
+      font-size: 10rem;
       padding-bottom: 4.5rem;
       font-family: "Lato";
       animation: fadeIn 1.2s; }
@@ -111,9 +114,12 @@ body {
       border: 2px solid #fff;
       border-radius: 3.5rem;
       font-size: 2.5rem;
-      transition: all 0.4s;
+      text-decoration: none;
       cursor: pointer;
-      animation: slideUp 1s; }
+      animation: slideUp 1s;
+      transition: all 0.4s; }
+      .header__title--button:link, .header__title--button:visited {
+        color: #fff; }
       .header__title--button:hover {
         transform: translateY(-0.5rem);
         background-color: #fff;
@@ -129,9 +135,9 @@ body {
   padding: 12rem 0;
   background-color: #f9f9f9; }
   .portfolio__intro--title {
-    padding-bottom: 4rem;
+    padding-bottom: 5rem;
     text-align: center;
-    font-size: 5rem;
+    font-size: 6rem;
     font-weight: bold;
     color: #474747; }
   .portfolio__intro--description {
@@ -147,7 +153,7 @@ body {
   flex-direction: column;
   align-items: center; }
   .portfolio__entry--title {
-    font-size: 3rem;
+    font-size: 3.5rem;
     padding: 8rem 0 3rem 0; }
   .portfolio__entry--description {
     padding-bottom: 5rem;
@@ -173,9 +179,9 @@ body {
   background-color: #a3d1d0;
   color: #fff; }
   .aboutme__title {
-    padding-bottom: 4rem;
+    padding-bottom: 5rem;
     text-align: center;
-    font-size: 5rem;
+    font-size: 6rem;
     font-weight: bold; }
   .aboutme__description {
     font-size: 2rem;
@@ -188,13 +194,13 @@ body {
   flex-direction: column;
   align-items: center;
   line-height: 3rem;
-  padding: 12rem 0;
+  padding: 20rem 0;
   background-color: #7c97c2;
   color: #fff; }
   .contact__title {
-    padding-bottom: 4rem;
+    padding-bottom: 5rem;
     text-align: center;
-    font-size: 5rem;
+    font-size: 6rem;
     font-weight: bold; }
   .contact__description {
     font-size: 2rem;
