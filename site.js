@@ -2,6 +2,8 @@ let portfolio = document.querySelector(".portfolio");
 let navAll = document.querySelector(".nav");
 let navLinksElement = document.querySelectorAll(".nav__links--element");
 let topOffset = offset(portfolio);
+let css = "nav__links:hover { border-bottom: 1px solid $color-pastel-blue; }";
+let style = document.createElement("style");
 
 window.addEventListener("scroll", () => {
     if(window.pageYOffset >= topOffset) {

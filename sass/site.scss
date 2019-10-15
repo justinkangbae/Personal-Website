@@ -8,7 +8,7 @@
 
 html {
 	font-size: 62.5%;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     overflow-x: hidden;
     scroll-behavior: smooth;
 
@@ -35,6 +35,10 @@ body {
     color: $color-white;
     overflow-x: hidden;
 }
+
+
+
+
 
 ///////////////NAVIGATION
 .nav {
@@ -93,6 +97,7 @@ body {
             padding: 1.8rem;
             color: $color-white;
             transition: all 0.3s;
+            border-bottom: 1px solid transparent;
 
             &:hover {
                 color: $color-pastel-blue;
@@ -107,6 +112,10 @@ body {
 .whiteText { color: $color-white; }
 .blueText { color: $color-pastel-blue; }
 .navShadow { box-shadow: 0px 5px 15px rgba(#000, .1) }
+
+
+
+
 
 //////////////HEADER
 .header {
@@ -164,6 +173,10 @@ body {
     }
 }
 
+
+
+
+
 /////////PORTFOLIO
 .portfolio {
 
@@ -172,6 +185,7 @@ body {
         line-height: 3rem;
         padding: 15rem 0;
         background-color: $color-light-gray;
+        border-bottom: 1px solid rgba(#000, 0.1);
 
         &--title {
             @include section__title;
@@ -221,6 +235,10 @@ body {
     }
 }
 
+
+
+
+
 ////////ABOUT ME
 .aboutme {
     @include center-flex;
@@ -240,6 +258,10 @@ body {
         text-align: center;
     }
 }
+
+
+
+
 
 /////////CONTACT
 .contact {
@@ -286,6 +308,10 @@ body {
         }
     }
 }
+
+
+
+
 
 ////////OTHER
 .separator {
