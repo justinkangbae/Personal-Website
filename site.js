@@ -29,18 +29,28 @@ function navBarChange() {
         });
 
         $(".nav__links--element").hover(function() {
-            $(this).css("border-bottom", "3px solid #acc7dc");
-            $(this).css("backface-visibility", "hidden");
+            $(this).addClass("highlightText");
+            $(this).removeClass("blueText");
         }, function() {
-            $(this).css("border-bottom", "3px solid transparent");
+            $(this).addClass("blueText");
+            $(this).removeClass("highlightText");
         });
-
     } 
     else {
+        $(".nav__links--element").unbind("mouseenter mouseleave");
+
         navAll.classList.remove("whiteBackground", "navShadow");
         
         navLinksElement.forEach((cur) => {
             cur.classList.remove("blueText");
+        })
+
+        $(".nav__links--element").hover(function() {
+            $(this).addClass("blueText");
+            $(this).addClass("whiteBackground");
+        }, function() {
+            $(this).removeClass("blueText");
+            $(this).removeClass("whiteBackground");
         });
     }
 }

@@ -103,11 +103,6 @@ body {
             @media only screen and (max-width: $bp-small) {
                 display: none;
             }
-
-            &:hover {
-                color: $color-pastel-blue;
-                background-color: $color-white;
-            }
         }
     }
 
@@ -134,6 +129,7 @@ body {
 .blueBackground { background-color: $color-pastel-blue; }
 .whiteText { color: $color-white; }
 .blueText { color: $color-pastel-blue; }
+.highlightText { color: $color-pastel-blue-highlight; }
 .navShadow { box-shadow: 0px 2px 10px rgba(#000, .1) }
 
 
