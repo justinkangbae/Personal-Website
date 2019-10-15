@@ -42,8 +42,9 @@ body {
     position: fixed; //navigation bar should be accessible at all times
     justify-content: space-between;
     align-items: center; //aligns links on vertical axis
+    transition: all .2s;
     width: 100%;
-    height: 18vh;
+    height: 15vh;
     z-index: 100;
 
     &__logo {
@@ -52,13 +53,14 @@ body {
         justify-content: center; //centers JB letters on horizontal axis 
         border-radius: 50%; //so its a circle
         background-color: $color-white;
-        width: 7rem;
-        height: 7rem;
-        margin-left: 5rem;
+        width: 8rem;
+        height: 8rem;
+        margin-left: 4%;
         transition: transform 0.4s;
         text-decoration: none;
 
         &:hover {
+            backface-visibility: hidden;
             transform: scale(1.1);
         }
 
@@ -76,9 +78,15 @@ body {
     &__links {
         list-style: none;
         font-size: 2rem;
+        font-weight: 500;
         display: flex;
-        margin-right: 5rem;
+        margin-right: 4%;
         font-family: "Montserrat";
+        transition: all .3s;
+
+        @media only screen and (max-width: $bp-small) {
+            display: none;
+        }
 
         &--element {
             text-decoration: none;
@@ -93,6 +101,12 @@ body {
         }
     }
 }
+
+.whiteBackground { background-color: $color-white; }
+.blueBackground { background-color: $color-pastel-blue; }
+.whiteText { color: $color-white; }
+.blueText { color: $color-pastel-blue; }
+.navShadow { box-shadow: 0px 5px 15px rgba(#000, .1) }
 
 //////////////HEADER
 .header {
@@ -111,7 +125,7 @@ body {
 
         &--name {
             display: inline-block;
-            color: $color-white;
+            color: $color-name;
         }
     
         &--summary {
@@ -156,7 +170,7 @@ body {
     &__intro {
         @include center-flex;
         line-height: 3rem;
-        padding: 12rem 0;
+        padding: 15rem 0;
         background-color: $color-light-gray;
 
         &--title {
@@ -166,7 +180,7 @@ body {
         }
 
         &--description {
-            color: rgba($color-darker-gray, 0.7);
+            color: rgba($color-darker-gray, 0.8);
             font-size: 2rem;
             width: 55vw;
             text-align: center;
@@ -179,8 +193,8 @@ body {
         @include center-flex;
 
         &--title {
-            font-size: 3.5rem;
-            padding: 8rem 0 3rem 0;
+            font-size: 4rem;
+            padding: 15rem 0 3rem 0;
         }
 
         &--description {
@@ -210,8 +224,8 @@ body {
 ////////ABOUT ME
 .aboutme {
     @include center-flex;
-    line-height: 3rem;
-    padding: 12rem 0;
+    line-height: 4rem;
+    padding: 15rem 0;
     background-color: $color-pastel-green;
     color: $color-white;
 
@@ -220,8 +234,8 @@ body {
     }
 
     &__description {
-        font-size: 2rem;
-        width: 55vw;
+        font-size: 2.3rem;
+        width: 60vw;
         letter-spacing: 0.1rem;
         text-align: center;
     }
@@ -230,7 +244,7 @@ body {
 /////////CONTACT
 .contact {
     @include center-flex;
-    line-height: 3rem;
+    line-height: 4rem;
     padding: 20rem 0;
     background-color: $color-blue;
     color: $color-white;
@@ -240,8 +254,8 @@ body {
     }
 
     &__description {
-        font-size: 2rem;
-        width: 40vw;
+        font-size: 2.3rem;
+        width: 45vw;
         text-align: center;
     }
 
