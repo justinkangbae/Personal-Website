@@ -2,24 +2,10 @@ let portfolio = document.querySelector(".portfolio");
 let navAll = document.querySelector(".nav");
 let navLinksElement = document.querySelectorAll(".nav__links--element");
 let topOffset = offset(portfolio);
-let css = "nav__links:hover { border-bottom: 1px solid $color-pastel-blue; }";
-let style = document.createElement("style");
+navBarChange();
 
 window.addEventListener("scroll", () => {
-    if(window.pageYOffset >= topOffset) {
-        navAll.classList.add("whiteBackground", "navShadow");
-
-        navLinksElement.forEach((cur) => {
-            cur.classList.add("blueText");
-        });
-    } 
-    else {
-        navAll.classList.remove("whiteBackground", "navShadow");
-        
-        navLinksElement.forEach((cur) => {
-            cur.classList.remove("blueText");
-        });
-    }
+    navBarChange();
 });
 
 window.addEventListener("resize", () => {
@@ -31,4 +17,30 @@ function offset(el) {
     let rect = el.getBoundingClientRect();
     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     return rect.top + scrollTop;
+}
+
+function navBarChange() {
+
+    if(window.pageYOffset >= topOffset) {
+        navAll.classList.add("whiteBackground", "navShadow");
+
+        navLinksElement.forEach((cur) => {
+            cur.classList.add("blueText");
+        });
+
+        $(".nav__links--element").hover(function() {
+            $(this).css("border-bottom", "3px solid #acc7dc");
+            $(this).css("backface-visibility", "hidden");
+        }, function() {
+            $(this).css("border-bottom", "3px solid transparent");
+        });
+
+    } 
+    else {
+        navAll.classList.remove("whiteBackground", "navShadow");
+        
+        navLinksElement.forEach((cur) => {
+            cur.classList.remove("blueText");
+        });
+    }
 }
