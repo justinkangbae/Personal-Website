@@ -25,10 +25,6 @@ html {
     @media only screen and (max-width: $bp-small) {
         font-size: 30%;
     }
-
-    @media only screen and (max-width: $bp-smallest) {
-        font-size: 25%;
-    }
 }
 
 body {
@@ -51,6 +47,10 @@ body {
     width: 100%;
     height: 10rem;
     z-index: 100;
+
+    @media only screen and (max-width: $bp-small) {
+        height: 14rem;
+    }
 
     &__logo {
         display: flex;

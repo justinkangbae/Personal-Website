@@ -12,7 +12,6 @@ $separator: #e6e6e6;
 $bp-largest: 80em; //1280px
 $bp-medium: 50em; //800px
 $bp-small: 32em; //512px
-$bp-smallest: 23em; //368px
 
 
 //MIXINS
@@ -32,6 +31,12 @@ $bp-smallest: 23em; //368px
 @mixin hamburger {
     width: 4.5rem;
     height: .5rem;
+
+    @media only screen and (max-width: $bp-small) {
+        width: 6rem;
+        height: 1rem;
+    }
+
     background-color: $color-white;
     border-radius: 4rem;
 }
