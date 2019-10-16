@@ -29,13 +29,8 @@ $bp-small: 32em; //512px
 }
 
 @mixin hamburger {
-    width: 4.5rem;
-    height: .5rem;
-
-    @media only screen and (max-width: $bp-small) {
-        width: 6rem;
-        height: 1rem;
-    }
+    width: 6rem;
+    height: 1rem;
 
     background-color: $color-white;
     border-radius: 4rem;

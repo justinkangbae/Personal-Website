@@ -1,6 +1,10 @@
 let portfolio = document.querySelector(".portfolio");
 let navAll = document.querySelector(".nav");
 let navLinksElement = document.querySelectorAll(".nav__links--element");
+let hamburger = document.querySelector(".nav__hamburger");
+let hamburgerTop = document.querySelector(".nav__hamburger--top");
+let hamburgerMid = document.querySelector(".nav__hamburger--mid");
+let hamburgerBot = document.querySelector(".nav__hamburger--bot");
 let topOffset = offset(portfolio);
 navBarChange();
 
@@ -10,6 +14,12 @@ window.addEventListener("scroll", () => {
 
 window.addEventListener("resize", () => {
     topOffset = offset(portfolio);
+});
+
+hamburger.addEventListener("click", function() {
+    hamburgerTop.classList.toggle("navAnimationTop");
+    hamburgerMid.classList.toggle("navAnimationMid");
+    hamburgerBot.classList.toggle("navAnimationBot");
 });
 
 //function that gets vertical offset of portfolio 
