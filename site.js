@@ -17,16 +17,13 @@ window.addEventListener("resize", () => {
     topOffset = offset(portfolio);
 });
 
-//for media query $bp-small
-if(window.innerWidth > 512) {
-    hamburger.addEventListener("click", function() {
-        hamburgerTop.classList.toggle("navAnimationTop");
-        hamburgerMid.classList.toggle("navAnimationMid");
-        hamburgerBot.classList.toggle("navAnimationBot");
+hamburger.addEventListener("click", function() {
+    hamburgerTop.classList.toggle("navAnimationTop");
+    hamburgerMid.classList.toggle("navAnimationMid");
+    hamburgerBot.classList.toggle("navAnimationBot");
     
-        navLinks.classList.toggle("visible");
-    });
-}
+    navLinks.classList.toggle("visible");
+});
 
 //function that gets vertical offset of the element passed in 
 function offset(el) {
