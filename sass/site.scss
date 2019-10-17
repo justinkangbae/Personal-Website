@@ -251,7 +251,11 @@ body {
         }
 
         &--link {
-            width: 70%;
+            width: 40%;
+
+            @media screen only (max-width: $bp-small) {
+                width: 70%;
+            }
         }
 
         &--image {
