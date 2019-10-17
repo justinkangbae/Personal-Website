@@ -21,7 +21,7 @@ html {
     }
 
     @media only screen and (max-width: $bp-small) {
-        font-size: 30%;
+        font-size: 35%;
     }
 }
 
@@ -210,6 +210,10 @@ body {
         padding: 15rem 0;
         background-color: $color-light-gray;
 
+        @media only screen and (max-width: $bp-small) {
+            padding: 12rem 0;
+        }
+
         &--title {
             @include section__title;
 
@@ -219,8 +223,10 @@ body {
         &--description {
             color: rgba($color-darker-gray, 0.8);
             font-size: 2rem;
-            width: 55vw;
+            width: 65vw;
             text-align: center;
+
+            @include bp-small;
         }
     }
 
@@ -240,11 +246,17 @@ body {
             font-size: 2rem;
             width: 50vw;
             line-height: 3rem;
+
+            @include bp-small;
+        }
+
+        &--link {
+            width: 70%;
         }
 
         &--image {
-            width: 55rem;
-            height: 36rem;
+            width: 100%;
+            height: auto;
             transition: all 0.3s;
 
             &:hover {
@@ -275,10 +287,12 @@ body {
     }
 
     &__description {
-        font-size: 2.3rem;
+        font-size: 2rem;
         width: 60vw;
         letter-spacing: 0.1rem;
         text-align: center;
+
+        @include bp-small;
     }
 }
 
@@ -302,6 +316,8 @@ body {
         font-size: 2.3rem;
         width: 45vw;
         text-align: center;
+
+        @include bp-small;
     }
 
     &__links {

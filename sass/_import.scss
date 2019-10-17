@@ -36,6 +36,13 @@ $bp-small: 32em; //512px
     border-radius: 4rem;
 }
 
+@mixin bp-small {
+    @media only screen and (max-width: $bp-small) {
+        width: 85vw;
+        font-size: 2.2rem;
+    }
+}
+
 //ANIMATIONS
 @keyframes fadeIn {
     0% {

@@ -35,7 +35,7 @@ html {
       font-size: 40%; } }
   @media only screen and (max-width: 32em) {
     html {
-      font-size: 30%; } }
+      font-size: 35%; } }
 
 body {
   font-family: "Lato";
@@ -188,6 +188,9 @@ body {
   line-height: 3rem;
   padding: 15rem 0;
   background-color: #f7f7f7; }
+  @media only screen and (max-width: 32em) {
+    .portfolio__intro {
+      padding: 12rem 0; } }
   .portfolio__intro--title {
     padding-bottom: 5rem;
     text-align: center;
@@ -197,8 +200,12 @@ body {
   .portfolio__intro--description {
     color: rgba(71, 71, 71, 0.8);
     font-size: 2rem;
-    width: 55vw;
+    width: 65vw;
     text-align: center; }
+    @media only screen and (max-width: 32em) {
+      .portfolio__intro--description {
+        width: 85vw;
+        font-size: 2.2rem; } }
 
 .portfolio__entry {
   color: #474747;
@@ -215,9 +222,15 @@ body {
     font-size: 2rem;
     width: 50vw;
     line-height: 3rem; }
+    @media only screen and (max-width: 32em) {
+      .portfolio__entry--description {
+        width: 85vw;
+        font-size: 2.2rem; } }
+  .portfolio__entry--link {
+    width: 70%; }
   .portfolio__entry--image {
-    width: 55rem;
-    height: 36rem;
+    width: 100%;
+    height: auto;
     transition: all 0.3s; }
     .portfolio__entry--image:hover {
       transform: scale(1.02); }
@@ -238,10 +251,14 @@ body {
     font-size: 6rem;
     font-weight: bold; }
   .aboutme__description {
-    font-size: 2.3rem;
+    font-size: 2rem;
     width: 60vw;
     letter-spacing: 0.1rem;
     text-align: center; }
+    @media only screen and (max-width: 32em) {
+      .aboutme__description {
+        width: 85vw;
+        font-size: 2.2rem; } }
 
 .contact {
   display: flex;
@@ -260,6 +277,10 @@ body {
     font-size: 2.3rem;
     width: 45vw;
     text-align: center; }
+    @media only screen and (max-width: 32em) {
+      .contact__description {
+        width: 85vw;
+        font-size: 2.2rem; } }
   .contact__links {
     display: grid;
     grid-template-columns: repeat(5, 1fr);

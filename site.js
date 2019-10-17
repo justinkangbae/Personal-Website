@@ -38,6 +38,10 @@ function navBarChange() {
             cur.classList.add("blueText");
         });
 
+        hamburgerMid.classList.add("blueBackground");
+        hamburgerBot.classList.add("blueBackground");
+        hamburgerTop.classList.add("blueBackground");
+
         $(".nav__links--element").hover(function() {
             $(this).addClass("highlightText");
             $(this).removeClass("blueText");
@@ -54,6 +58,10 @@ function navBarChange() {
         navLinksElement.forEach((cur) => {
             cur.classList.remove("blueText");
         })
+
+        hamburgerTop.classList.remove("blueBackground");
+        hamburgerMid.classList.remove("blueBackground");
+        hamburgerBot.classList.remove("blueBackground");
 
         $(".nav__links--element").hover(function() {
             $(this).addClass("blueText");
