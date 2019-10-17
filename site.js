@@ -17,13 +17,16 @@ window.addEventListener("resize", () => {
     topOffset = offset(portfolio);
 });
 
-hamburger.addEventListener("click", function() {
-    hamburgerTop.classList.toggle("navAnimationTop");
-    hamburgerMid.classList.toggle("navAnimationMid");
-    hamburgerBot.classList.toggle("navAnimationBot");
-
-    navLinks.classList.toggle("visible");
-});
+//for media query $bp-small
+if(window.innerWidth > 512) {
+    hamburger.addEventListener("click", function() {
+        hamburgerTop.classList.toggle("navAnimationTop");
+        hamburgerMid.classList.toggle("navAnimationMid");
+        hamburgerBot.classList.toggle("navAnimationBot");
+    
+        navLinks.classList.toggle("visible");
+    });
+}
 
 //function that gets vertical offset of the element passed in 
 function offset(el) {
@@ -41,10 +44,6 @@ function navBarChange() {
             cur.classList.add("blueText");
         });
 
-        hamburgerMid.classList.add("blueBackground");
-        hamburgerBot.classList.add("blueBackground");
-        hamburgerTop.classList.add("blueBackground");
-
         $(".nav__links--element").hover(function() {
             $(this).addClass("highlightText");
             $(this).removeClass("blueText");
@@ -53,7 +52,13 @@ function navBarChange() {
             $(this).removeClass("highlightText");
         });
 
-        hamburger.classList.add("visible");
+        //for media query $bp-small
+        if(window.innerWidth <= 512) {
+            hamburgerMid.classList.add("blueBackground");
+            hamburgerBot.classList.add("blueBackground");
+            hamburgerTop.classList.add("blueBackground");
+            hamburger.classList.add("visible");
+        }
     } 
     else {
         $(".nav__links--element").unbind("mouseenter mouseleave");
@@ -64,10 +69,6 @@ function navBarChange() {
             cur.classList.remove("blueText");
         })
 
-        hamburgerTop.classList.remove("blueBackground", "navAnimationTop");
-        hamburgerMid.classList.remove("blueBackground", "navAnimationMid");
-        hamburgerBot.classList.remove("blueBackground", "navAnimationBot");
-
         $(".nav__links--element").hover(function() {
             $(this).addClass("blueText");
             $(this).addClass("whiteBackground");
@@ -76,7 +77,13 @@ function navBarChange() {
             $(this).removeClass("whiteBackground");
         });
 
-        hamburger.classList.remove("visible");
-        navLinks.classList.remove("visible");
+        //for media query $bp-small
+        if(window.innerWidth <= 512) {
+            hamburgerTop.classList.remove("blueBackground", "navAnimationTop");
+            hamburgerMid.classList.remove("blueBackground", "navAnimationMid");
+            hamburgerBot.classList.remove("blueBackground", "navAnimationBot");
+            hamburger.classList.remove("visible");
+            navLinks.classList.remove("visible");
+        }
     }
 }
