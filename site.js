@@ -1,5 +1,6 @@
 let portfolio = document.querySelector(".portfolio");
 let navAll = document.querySelector(".nav");
+let navLinks = document.querySelector(".nav__links");
 let navLinksElement = document.querySelectorAll(".nav__links--element");
 let hamburger = document.querySelector(".nav__hamburger");
 let hamburgerTop = document.querySelector(".nav__hamburger--top");
@@ -20,9 +21,11 @@ hamburger.addEventListener("click", function() {
     hamburgerTop.classList.toggle("navAnimationTop");
     hamburgerMid.classList.toggle("navAnimationMid");
     hamburgerBot.classList.toggle("navAnimationBot");
+
+    navLinks.classList.toggle("visible");
 });
 
-//function that gets vertical offset of portfolio 
+//function that gets vertical offset of the element passed in 
 function offset(el) {
     let rect = el.getBoundingClientRect();
     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -49,6 +52,8 @@ function navBarChange() {
             $(this).addClass("blueText");
             $(this).removeClass("highlightText");
         });
+
+        hamburger.classList.add("visible");
     } 
     else {
         $(".nav__links--element").unbind("mouseenter mouseleave");
@@ -59,9 +64,9 @@ function navBarChange() {
             cur.classList.remove("blueText");
         })
 
-        hamburgerTop.classList.remove("blueBackground");
-        hamburgerMid.classList.remove("blueBackground");
-        hamburgerBot.classList.remove("blueBackground");
+        hamburgerTop.classList.remove("blueBackground", "navAnimationTop");
+        hamburgerMid.classList.remove("blueBackground", "navAnimationMid");
+        hamburgerBot.classList.remove("blueBackground", "navAnimationBot");
 
         $(".nav__links--element").hover(function() {
             $(this).addClass("blueText");
@@ -70,5 +75,8 @@ function navBarChange() {
             $(this).removeClass("blueText");
             $(this).removeClass("whiteBackground");
         });
+
+        hamburger.classList.remove("visible");
+        navLinks.classList.remove("visible");
     }
 }
