@@ -53,8 +53,14 @@ function navBarChange() {
         //for media query $bp-small
         if(window.innerWidth <= 512) {
             hamburger.classList.add("visible");
+
+            if(!hamburgerTop.classList.contains("navAnimationTop")) {
+                navLinks.classList.remove("visible");
+            }
+            
         } else if (window.innerWidth > 512) {
             hamburger.classList.remove("visible");
+            navLinks.classList.add("visible");
         }
     } 
     else {
@@ -74,13 +80,14 @@ function navBarChange() {
             $(this).removeClass("whiteBackground");
         });
 
+        navLinks.classList.remove("visible");
+
         //for media query $bp-small
         if(window.innerWidth <= 512) {
             hamburgerTop.classList.remove("navAnimationTop");
             hamburgerMid.classList.remove("navAnimationMid");
             hamburgerBot.classList.remove("navAnimationBot");
             hamburger.classList.remove("visible");
-            navLinks.classList.remove("visible");
         }
     }
 }
