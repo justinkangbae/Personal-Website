@@ -15,6 +15,7 @@ window.addEventListener("scroll", () => {
 
 window.addEventListener("resize", () => {
     topOffset = offset(portfolio);
+    navBarChange();
 });
 
 hamburger.addEventListener("click", function() {
@@ -51,10 +52,9 @@ function navBarChange() {
 
         //for media query $bp-small
         if(window.innerWidth <= 512) {
-            hamburgerMid.classList.add("blueBackground");
-            hamburgerBot.classList.add("blueBackground");
-            hamburgerTop.classList.add("blueBackground");
             hamburger.classList.add("visible");
+        } else if (window.innerWidth > 512) {
+            hamburger.classList.remove("visible");
         }
     } 
     else {
@@ -76,9 +76,9 @@ function navBarChange() {
 
         //for media query $bp-small
         if(window.innerWidth <= 512) {
-            hamburgerTop.classList.remove("blueBackground", "navAnimationTop");
-            hamburgerMid.classList.remove("blueBackground", "navAnimationMid");
-            hamburgerBot.classList.remove("blueBackground", "navAnimationBot");
+            hamburgerTop.classList.remove("navAnimationTop");
+            hamburgerMid.classList.remove("navAnimationMid");
+            hamburgerBot.classList.remove("navAnimationBot");
             hamburger.classList.remove("visible");
             navLinks.classList.remove("visible");
         }
