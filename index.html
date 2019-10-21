@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<title>Web Developer - Justin Kang Bae</title> <!-- this is what shows up in searches -->
+	<!-- this is what shows up in searches -->
+	<title>Justin Kang Bae - Web Developer</title>
 	<meta charset="utf-8">
+	<!-- meta tags help with SEO so that  -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Hi! My name is Justin and I am an aspiring web developer.">
-	<meta name="keywords" content="web developer, portfolio">
+	<meta name="description"
+		content="Hi! My name is Justin Bae and I am an aspiring web developer. Come in to see if I'm a good fit for your company!">
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,500,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/89235fe8ab.js"></script>
 	<link rel="stylesheet" href="css/site.css">
 </head>
@@ -16,7 +18,7 @@
 <body>
 	<!-- NAVIGATION -->
 	<div class="nav">
-		<a class="nav__logo" href="#"> 
+		<a class="nav__logo" href="#">
 			<div class="nav__logo--letters">JB</div>
 		</a>
 
@@ -40,7 +42,7 @@
 			<div class="nav__hamburger--bot"></div>
 		</div>
 	</div>
-	
+
 
 	<!-- HEADER -->
 	<header class="header">
@@ -63,36 +65,66 @@
 			<!-- PORTFOLIO INTRO -->
 			<div class="portfolio__intro">
 				<h2 class="portfolio__intro--title">Portfolio</h2>
-				<p class="portfolio__intro--description">Here is some of the work I have done. These projects are some of the things I have been able to make as I continue to learn and refine my development skills. If you are curious about how I programmed them, you can view my Github or contact me directly. If you want to visit the site, click the image!</p>
+				<p class="portfolio__intro--description">Here is some of the work I have done. These projects are some
+					of the things I have been able to make as I continue to learn and refine my development skills. If
+					you are curious about how I programmed them, you can view my Github or contact me directly. If you
+					want to visit the site, click the image!</p>
 			</div>
 
-			<!-- 1ST PORTFOLIO ENTRY -->
-			<div class="portfolio__entry" id="portfolio">
-				<h3 class="portfolio__entry--title">Budget App</h3>
-				<p class="portfolio__entry--description">Budgeting app where incomes and expenses can be added in to find out your budget for the month. Coded in HTML, CSS, and JavaScript. </p>
-				<a href="https://budgetproject.netlify.com/" target="_blank" class="portfolio__entry--link">
-					<img class="portfolio__entry--image" src="images/budget_app.png">
-				</a>
-			</div>
-			<div class="separator"></div>
+			<!-- PORTFOLIO ENTRIES -->
+			<div class="portfolio__entries">
 
-			<!-- 2ND PORTFOLIO ENTRY -->
-			<div class="portfolio__entry">
-				<h3 class="portfolio__entry--title">RGB Color Game</h3>
-				<p class="portfolio__entry--description">Simple game coded in HTML, CSS, and JavaScript in which the player must match a randomly generated RGB color to one of either three or six squares based on chosen difficulty (Easy or Hard).</p>
-				<a href="https://jkb-rgbcolorgame.netlify.com/" target="_blank" class="portfolio__entry--link">
-					<img class="portfolio__entry--image" src="images/rgb_game.png">
-				</a>
-			</div>
-			<div class="separator"></div>
+				<!-- 1ST PORTFOLIO ENTRY -->
+				<div class="portfolio__entry" id="portfolio">
+					<h3 class="portfolio__entry--title">My Website</h3>
+					<p class="portfolio__entry--description">This is my personal website! This is where I try out a lot
+						of the new things I have learned and new things are constantly being added. I wrote this site
+						with HTML, CSS, and JavaScript. </p>
 
-			<!-- 3RD PORTFOLIO ENTRY -->
-			<div class="portfolio__entry">
-				<h3 class="portfolio__entry--title">To-Do List</h3>
-				<p class="portfolio__entry--description">To-do list coded in HTML, CSS, and jQuery where the user can submit new list items by typing it in and confirming with “Enter” keypress, cross off completed to-do items, and delete list items.</p>
-				<a href="https://jkb-todolist.netlify.com/" target="_blank" class="portfolio__entry--link">
-					<img class="portfolio__entry--image" src="images/todo_list.png">
-				</a>
+					<img class="portfolio__entry--image" src="images/personal_website.webp"
+						alt="my_personal_website_project">
+					<a href="https://justinkangbae.netlify.com" target="_blank" class="site__button"></a>
+					<a href="https://github.com/justinkangbae/Personal-Website" target="_blank"
+						class="github__button"></a>
+				</div>
+
+				<!-- 2ND PORTFOLIO ENTRY -->
+				<div class="portfolio__entry">
+					<h3 class="portfolio__entry--title">Budget App</h3>
+					<p class="portfolio__entry--description">Budgeting app where incomes and expenses can be added in to
+						find out your budget for the month. Coded in HTML, CSS, and JavaScript. </p>
+					<img class="portfolio__entry--image" src="images/budget_app.webp"
+						alt="my_personal_website_project">
+					<a href="https://budgetproject.netlify.com/" target="_blank" class="site__button"></a>
+					<a href="https://github.com/justinkangbae/Budget-App" target="_blank"
+						class="github__button"></a>
+				</div>
+
+				<!-- 3RD PORTFOLIO ENTRY -->
+				<div class="portfolio__entry">
+					<h3 class="portfolio__entry--title">RGB Color Game</h3>
+					<p class="portfolio__entry--description">Simple game coded in HTML, CSS, and JavaScript in which the
+						player must match a randomly generated RGB color to one of either three or six squares based on
+						chosen difficulty (Easy or Hard).</p>
+					<img class="portfolio__entry--image" src="images/rgb_game.webp"
+						alt="rgb_color_game_project">
+					<a href="https://jkb-rgbcolorgame.netlify.com/" target="_blank" class="site__button"></a>
+					<a href="https://github.com/justinkangbae/RGB-Color-Game" target="_blank"
+						class="github__button"></a>
+				</div>
+
+				<!-- 4TH PORTFOLIO ENTRY -->
+				<div class="portfolio__entry">
+					<h3 class="portfolio__entry--title">To-Do List</h3>
+					<p class="portfolio__entry--description">To-do list coded in HTML, CSS, and jQuery where the user
+						can submit new list items by typing it in and confirming with “Enter” keypress, cross off
+						completed to-do items, and delete list items.</p>
+					<img class="portfolio__entry--image" src="images/todo_list.webp"
+						alt="todo_list_project">
+					<a href="https://jkb-todolist.netlify.com/" target="_blank" class="site__button"></a>
+					<a href="https://github.com/justinkangbae/To-Do-List" target="_blank"
+						class="github__button"></a>
+				</div>
 			</div>
 
 		</section>
@@ -101,24 +133,31 @@
 		<section class="aboutme" id="aboutme">
 			<div data-aos-once="true">
 				<h2 class="aboutme__title">About Me</h2>
-				<p class="aboutme__description">I am an aspiring web developer who recently graduated from the University of Texas at Dallas with a degree in Computer Engineering. I have a constant drive to learn and improve on my web development skills and would love to make this my career.</p>
+				<p class="aboutme__description">I am an aspiring web developer who recently graduated from the
+					University of Texas at Dallas with a degree in Computer Engineering. I have a constant drive to
+					learn and improve on my web development skills and would love to make this my career.</p>
 			</div>
 		</section>
-		
+
 		<!-- CONTACT SECTION -->
 		<section class="contact" id="contact">
 			<h2 class="contact__title">Let's get in contact!</h2>
 
-			<p class="contact__description">If you like my work and want to collaborate in some way, or want a greater look into my skills, feel free to click the links below.</p>
+			<p class="contact__description">If you like my work and want to collaborate in some way, or want a greater
+				look into my skills, feel free to click the links below.</p>
 
 			<div class="sm--separator"></div>
 
 			<div class="contact__links">
 				<a href="Resume.pdf" target="_blank" class="contact__links--icon fas fa-file"></a>
-				<a href="https://www.github.com/justinkangbae/" target="_blank" class="contact__links--icon fab fa-github-square"></a>
-				<a href="https://www.linkedin.com/in/justinbae3900/" target="_blank" class="contact__links--icon fab fa-linkedin"></a>
-				<a href="https://www.facebook.com/justin.k.bae" target="_blank" class="contact__links--icon fab fa-facebook-square"></a>
-				<a href="https://www.instagram.com/jkbaeber/" target="_blank" class="contact__links--icon fab fa-instagram"></a>
+				<a href="https://www.github.com/justinkangbae/" target="_blank"
+					class="contact__links--icon fab fa-github-square"></a>
+				<a href="https://www.linkedin.com/in/justinbae3900/" target="_blank"
+					class="contact__links--icon fab fa-linkedin"></a>
+				<a href="https://www.facebook.com/justin.k.bae" target="_blank"
+					class="contact__links--icon fab fa-facebook-square"></a>
+				<a href="https://www.instagram.com/jkbaeber/" target="_blank"
+					class="contact__links--icon fab fa-instagram"></a>
 			</div>
 		</section>
 	</main>
