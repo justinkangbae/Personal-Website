@@ -248,12 +248,36 @@ body {
       .portfolio__entry--description {
         width: 85%;
         font-size: 2.2rem; } }
-  .portfolio__entry--image {
+  .portfolio__entry .card {
     width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 0.5s; }
+    .portfolio__entry .card__buttons {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+  .portfolio__entry .info__button {
+    padding: 1rem 2rem;
+    border: 1px solid #f7f7f7;
+    border-radius: 3rem;
+    color: #f7f7f7;
+    text-decoration: none;
+    font-size: 3.5rem;
+    margin: 2rem;
+    opacity: 0;
+    visibility: invisible;
+    transition: all 0.5s; }
+    .portfolio__entry .info__button:hover {
+      color: rgba(71, 71, 71, 0.7);
+      background-color: rgba(247, 247, 247, 0.8); }
+  .portfolio__entry--image {
+    width: 100%;
     height: auto;
-    transition: all 0.2s; }
-    .portfolio__entry--image:hover {
-      filter: brightness(40%); }
+    transition: all 0.5s; }
 
 .aboutme {
   display: flex;

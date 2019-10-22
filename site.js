@@ -26,6 +26,24 @@ hamburger.addEventListener("click", function() {
     navLinks.classList.toggle("visible");
 });
 
+//when mouse enters image of project, buttons for the site and github repo will appear
+$(".card").mouseenter(function() {
+    this.childNodes[3].childNodes[1].style.opacity = 1;
+    this.childNodes[3].childNodes[1].style.visibiilty = "visible";
+    this.childNodes[3].childNodes[3].style.opacity = 1;
+    this.childNodes[3].childNodes[3].style.visibiilty = "visible";
+    this.childNodes[1].style.filter = "brightness(60%) blur(1.5px)";
+});
+
+//when mouse leaves image of project, buttons for the site and github repo will disappear
+$(".card").mouseleave(function() {
+    this.childNodes[3].childNodes[1].style.opacity = 0;
+    this.childNodes[3].childNodes[1].style.visibiilty = "invisible";
+    this.childNodes[3].childNodes[3].style.opacity = 0;
+    this.childNodes[3].childNodes[3].style.visibiilty = "invisible";
+    this.childNodes[1].style.filter = "";
+});
+
 //function that gets vertical offset of the element passed in 
 function offset(el) {
     let rect = el.getBoundingClientRect();

@@ -272,18 +272,44 @@ body {
             @include bp-small;
         }
 
-        &--link {
-            
+        .card {
+            width: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            transition: all 0.5s;
+
+            &__buttons {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .info__button {
+            padding: 1rem 2rem;
+            border: 1px solid $color-light-gray;
+            border-radius: 3rem;
+            color: $color-light-gray;
+            text-decoration: none;
+            font-size: 3.5rem;
+            margin: 2rem;
+            opacity: 0;
+            visibility: invisible;
+            transition: all 0.5s;
+
+            &:hover {
+                color: rgba($color-darker-gray, 0.7);
+                background-color: rgba($color-light-gray, 0.8);
+            }
         }
 
         &--image {
-            width: 70%;
+            width: 100%;
             height: auto;
-            transition: all 0.2s;
-
-            &:hover {
-                filter: brightness(40%);
-            }
+            transition: all 0.5s;
         }
     }
 }
