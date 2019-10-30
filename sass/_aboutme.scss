@@ -1,0 +1,22 @@
+////////ABOUT ME
+.aboutme {
+    @include center-flex;
+    line-height: 4rem;
+    padding: 15rem 0;
+    background-color: $color-pastel-green;
+    color: $color-white;
+
+    &__title {
+        @include section__title;
+    }
+
+    &__description {
+        font-size: 2rem;
+        width: 60vw;
+        letter-spacing: 0.1rem;
+        text-align: center;
+        margin: auto;
+
+        @include bp-small;
+    }
+}

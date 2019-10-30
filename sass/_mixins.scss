@@ -1,0 +1,28 @@
+//MIXINS
+@mixin section__title {
+    padding-bottom: 5rem;
+    text-align: center;
+    font-size: 6rem;
+    font-weight: bold;
+}
+
+@mixin center-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin hamburger {
+    width: 6rem;
+    height: 1rem;
+
+    background-color: $color-pastel-blue;
+    border-radius: 4rem;
+}
+
+@mixin bp-small {
+    @media only screen and (max-width: $bp-small) {
+        width: 85%;
+        font-size: 2.2rem;
+    }
+}

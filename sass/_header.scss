@@ -1,0 +1,55 @@
+//////////////HEADER
+.header {
+    width: 100vw;
+    height: 105vh;
+    background-color: $color-pastel-blue;
+    display: flex;
+    justify-content: center;
+    font-family: "Montserrat";
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &--name {
+            display: inline-block;
+            color: $color-name;
+        }
+    
+        &--summary {
+            font-family: "Lato";
+            padding-bottom: 4.5rem;
+            font-size: 6rem;
+            animation: fadeIn 1.2s;
+            text-align: center;
+        }
+
+        &--button {
+            padding: 2rem 3.5rem;
+            border: 2px solid $color-white;
+            border-radius: 3.5rem;
+            font-size: 2.5rem;
+            text-decoration: none;
+            cursor: pointer;
+            animation: slideUp 1s;
+            transition: all 0.4s;
+
+            &:link,
+            &:visited {
+                color: $color-white;
+            }
+
+            &:hover {
+                transform: translateY(-0.5rem);
+                background-color: $color-white;
+                color: $color-pastel-blue;
+            }
+
+            &:active {
+                transform: translateY(-0.1rem);
+            }
+        }
+    }
+}

@@ -1,0 +1,101 @@
+///////////////NAVIGATION
+.nav {
+    display: flex; //to make arranging elements within container easy to arrange
+    position: fixed; //navigation bar should be accessible at all times
+    justify-content: space-between;
+    align-items: center; //aligns links on vertical axis
+    width: 100%;
+    height: 10rem;
+    z-index: 100;
+
+    @media only screen and (max-width: $bp-small) {
+        height: $nav-height;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;     //centers JB letters on vertical axis
+        justify-content: center; //centers JB letters on horizontal axis 
+        border-radius: 50%; //so its a circle
+        background-color: $color-white;
+        width: 8rem;
+        height: 8rem;
+        margin-left: 4%;
+        transition: transform 0.4s;
+        text-decoration: none;
+
+        &:hover {
+            backface-visibility: hidden;
+            transform: scale(1.1);
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+
+        &--letters {
+            color: $color-pastel-blue;
+            font-size: 3.5rem;
+            font-family: "Lobster";
+        }
+    }
+
+    &__links {
+        list-style: none;
+        font-size: 2rem;
+        font-weight: 500;
+        display: none;
+        margin-right: 4%;
+        font-family: "Montserrat";
+        transition: all .3s;
+        cursor: pointer;
+
+        @media only screen and (max-width: $bp-small) {
+            display: none;
+            position: absolute;
+            background-color: $color-white;
+            top: $nav-height;
+            width: 100%;
+            height: 15vh;
+            flex-direction: column;
+            justify-content: space-evenly;
+            margin-right: 0;
+            transition: all 0.3s;
+            border-bottom: 1px solid $color-pastel-blue;
+        }
+
+        &--element {
+            text-decoration: none;
+            padding: 1.8rem;
+            color: $color-white;
+            transition: all 0.3s;
+
+            @media only screen and (max-width: $bp-small) {
+                font-size: 2.5rem;
+                margin: 1.8rem;
+            }
+        }
+    }
+
+    &__hamburger {
+        display: none;
+
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+            justify-content: center;
+            width: 6rem;
+            height: 6rem;
+            margin-right: 4%;
+
+            &--top,
+            &--mid,
+            &--bot {
+                @include hamburger;
+                transition: all .4s;
+            }
+
+            &--top { transform: translateY(-.8rem); }
+            &--bot { transform: translateY(.8rem); }
+        }
+    }
+}

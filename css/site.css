@@ -85,7 +85,7 @@ body {
     @media only screen and (max-width: 32em) {
       .nav__links {
         display: none;
-        position: fixed;
+        position: absolute;
         background-color: #fff;
         top: 12rem;
         width: 100%;
@@ -123,36 +123,6 @@ body {
           transform: translateY(-0.8rem); }
         .nav__hamburger--bot {
           transform: translateY(0.8rem); } }
-
-.whiteBackground {
-  background-color: #fff; }
-
-.blueBackground {
-  background-color: #acc7dc; }
-
-.whiteText {
-  color: #fff; }
-
-.blueText {
-  color: #acc7dc; }
-
-.highlightText {
-  color: #62a7de; }
-
-.navShadow {
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); }
-
-.navAnimationTop {
-  transform: rotate(-45deg) translate(-1.375rem); }
-
-.navAnimationMid {
-  opacity: 0; }
-
-.navAnimationBot {
-  transform: rotate(45deg) translate(-1.375rem); }
-
-.visible {
-  display: flex; }
 
 .header {
   width: 100vw;
@@ -237,7 +207,8 @@ body {
   align-self: end; }
   .portfolio__entry--title {
     font-size: 4rem;
-    padding: 15rem 0 3rem 0; }
+    padding: 15rem 0 3rem 0;
+    text-align: center; }
   .portfolio__entry--description {
     padding-bottom: 5rem;
     text-align: center;
@@ -255,6 +226,10 @@ body {
     align-items: center;
     position: relative;
     transition: all 0.5s; }
+    .portfolio__entry .card__image {
+      width: 100%;
+      height: auto;
+      transition: all 0.5s; }
     .portfolio__entry .card__buttons {
       position: absolute;
       display: flex;
@@ -274,10 +249,10 @@ body {
     .portfolio__entry .info__button:hover {
       color: rgba(71, 71, 71, 0.7);
       background-color: rgba(247, 247, 247, 0.8); }
-  .portfolio__entry--image {
-    width: 100%;
-    height: auto;
-    transition: all 0.5s; }
+
+@media only screen and (max-width: 32em) {
+  [class~="portfolio__entry"]:last-of-type {
+    padding-bottom: 12rem; } }
 
 .aboutme {
   display: flex;
@@ -344,6 +319,36 @@ body {
       .contact__links--icon:active {
         transform: scale(0.9); }
 
+.whiteBackground {
+  background-color: #fff; }
+
+.blueBackground {
+  background-color: #acc7dc; }
+
+.whiteText {
+  color: #fff; }
+
+.blueText {
+  color: #acc7dc; }
+
+.highlightText {
+  color: #62a7de; }
+
+.navShadow {
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); }
+
+.navAnimationTop {
+  transform: rotate(-45deg) translate(-1.375rem); }
+
+.navAnimationMid {
+  opacity: 0; }
+
+.navAnimationBot {
+  transform: rotate(45deg) translate(-1.375rem); }
+
+.visible {
+  display: flex; }
+
 .sm--separator {
   height: 0.1rem;
   width: 30vw;
@@ -352,13 +357,3 @@ body {
   @media only screen and (max-width: 32em) {
     .sm--separator {
       width: 50vw; } }
-
-.separator {
-  height: 0.2rem;
-  width: 100vw;
-  margin-top: 12rem;
-  background-color: #e6e6e6; }
-
-@media only screen and (max-width: 32em) {
-  [class~="portfolio__entry"]:last-of-type {
-    padding-bottom: 12rem; } }

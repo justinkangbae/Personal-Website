@@ -1,0 +1,109 @@
+/////////PORTFOLIO
+.portfolio {
+
+    &__intro {
+        @include center-flex;
+        line-height: 3rem;
+        padding: 15rem 0;
+        background-color: $color-light-gray;
+
+        @media only screen and (max-width: $bp-small) {
+            padding: 12rem 0;
+        }
+
+        &--title {
+            @include section__title;
+
+            color: $color-darker-gray;
+        }
+
+        &--description {
+            color: rgba($color-darker-gray, 0.8);
+            font-size: 2rem;
+            width: 65vw;
+            text-align: center;
+
+            @include bp-small;
+        }
+    }
+
+    &__entries {
+        display: grid;
+        grid-template-columns: repeat(2, 0.8fr);
+        padding-bottom: 15rem;
+
+        @media only screen and (max-width: $bp-small) {
+            grid-template-columns: 1fr;
+            padding: 0;
+        }
+    }
+
+    &__entry {
+        color: $color-darker-gray;
+        background-color: $color-white;
+        @include center-flex;
+        align-self: end;
+
+        &--title {
+            font-size: 4rem;
+            padding: 15rem 0 3rem 0;
+            text-align: center;
+        }
+
+        &--description {
+            padding-bottom: 5rem;
+            text-align: center;
+            font-size: 2rem;
+            width: 80%;
+            line-height: 3rem;
+
+            @include bp-small;
+        }
+
+        .card {
+            width: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            transition: all 0.5s;
+
+            &__image {
+                width: 100%;
+                height: auto;
+                transition: all 0.5s;
+            }
+
+            &__buttons {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .info__button {
+            padding: 1rem 2rem;
+            border: 1px solid $color-light-gray;
+            border-radius: 3rem;
+            color: $color-light-gray;
+            text-decoration: none;
+            font-size: 3.5rem;
+            margin: 2rem;
+            opacity: 0;
+            visibility: invisible;
+            transition: all 0.5s;
+
+            &:hover {
+                color: rgba($color-darker-gray, 0.7);
+                background-color: rgba($color-light-gray, 0.8);
+            }
+        }
+    }
+}
+
+[class~="portfolio__entry"]:last-of-type {
+    @media only screen and (max-width: $bp-small) {
+        padding-bottom: 12rem;
+    }
+}
