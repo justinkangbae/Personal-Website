@@ -80,8 +80,7 @@ body {
     display: none;
     margin-right: 4%;
     font-family: "Montserrat";
-    transition: all .3s;
-    cursor: pointer; }
+    transition: all .3s; }
     @media only screen and (max-width: 32em) {
       .nav__links {
         display: none;
@@ -89,13 +88,14 @@ body {
         background-color: #fff;
         top: 12rem;
         width: 100%;
-        height: 15vh;
+        height: 16vh;
         flex-direction: column;
         justify-content: space-evenly;
         margin-right: 0;
         transition: all 0.3s;
         border-bottom: 1px solid #acc7dc; } }
     .nav__links--element {
+      cursor: pointer;
       text-decoration: none;
       padding: 1.8rem;
       color: #fff;
